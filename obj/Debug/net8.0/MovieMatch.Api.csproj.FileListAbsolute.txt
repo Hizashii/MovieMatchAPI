@@ -135,3 +135,4 @@ C:\For portfolio\Movies\MovieMatch.Api\obj\Debug\net8.0\MovieMatch.Api.xml
 C:\For portfolio\Movies\MovieMatch.Api\obj\Debug\net8.0\MovieMatch.Api.pdb
 C:\For portfolio\Movies\MovieMatch.Api\obj\Debug\net8.0\MovieMatch.Api.genruntimeconfig.cache
 C:\For portfolio\Movies\MovieMatch.Api\obj\Debug\net8.0\ref\MovieMatch.Api.dll
+C:\For portfolio\Movies\MovieMatch.Api\obj\Debug\net8.0\MovieMatch.Api.sourcelink.json
