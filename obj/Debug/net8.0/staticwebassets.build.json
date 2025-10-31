@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uDY08GYiZbXIlrf3nWzuPHosg6nq29kMX8BwMGfyxu8=",
+  "Source": "MovieMatch.Api",
+  "BasePath": "_content/MovieMatch.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
