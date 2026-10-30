@@ -1,28 +1,47 @@
-# 🎬 MovieMatch API  
-*A lightweight movie management API built with .NET 8*
+# MovieMatch API
 
-![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-Active-success)
-![Swagger](https://img.shields.io/badge/API-SwaggerUI-orange)
+A C# / **ASP.NET Core (.NET 8)** REST API project for movie data and user authentication. Built to explore API structure, dependency injection, service and repository abstractions, and Swagger documentation.
 
----
+## Stack
 
-## 🧩 Overview
-**MovieMatch.Api** is a simple yet powerful **.NET 8 Web API** that demonstrates clean backend architecture and RESTful design — all without using a database.  
-Movies are stored **in memory**, making this project ideal for **learning, rapid prototyping**, or showcasing **.NET backend skills**.
+- ASP.NET Core Web API and C#
+- JWT bearer authentication
+- Swagger / OpenAPI
+- Entity Framework Core and SQLite configuration
+- In-memory repository implementations
 
-It’s designed to be easily extended with **Entity Framework**, **JWT authentication**, or **cloud deployment** later on.
+## Architecture
 
----
+- `Controllers/` — HTTP endpoints
+- `Services/` — application services
+- `Repositories/` — repository abstractions and implementations
+- `Models/` — application data models
+- `Data/` — database context
+- `Filters/` — request filters
 
-## 🚀 Features
-- 🔹 .NET 8 Web API with clean architecture  
-- 🔹 CRUD operations for movies (Create, Read, Update, Delete)  
-- 🔹 In-memory data store (no DB setup required)  
-- 🔹 RESTful endpoints with proper HTTP codes  
-- 🔹 Interactive documentation via **Swagger UI**  
-- 🔹 Follows dependency injection & service separation best practices  
+## Running locally
 
----
+Install the **.NET 8 SDK** and restore dependencies:
 
+```bash
+dotnet restore
+dotnet run
+```
+
+The root route redirects to **/swagger** for API exploration.
+
+The application reads configuration for its JWT issuer, audience and signing key. Supply a strong local secret using secure configuration; don't use development defaults in a deployment.
+
+## Persistence: current implementation
+
+`Program.cs` includes a `UseInMemory` setting and an Entity Framework Core / SQLite database context. **Movie and user repositories currently remain in-memory in both modes.** The database configuration is a foundation for future persistent repository implementations, not a claim that movie records are already persisted to SQLite.
+
+## What this project shows
+
+- REST endpoint design
+- Middleware and JWT authentication configuration
+- Dependency injection and interfaces
+- API exploration through Swagger
+- Trade-offs between an in-memory prototype and durable persistence
+
+This is a learning/portfolio API, not a production service.
